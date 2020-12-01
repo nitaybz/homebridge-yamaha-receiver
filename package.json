@@ -1,7 +1,7 @@
 {
   "name": "homebridge-yamaha-receiver",
   "description": "Homebridge Plugin for Yamaha Audio Receivers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/nitaybz/homebridge-yamaha-receiver.git"
