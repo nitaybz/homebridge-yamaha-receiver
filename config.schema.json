@@ -161,6 +161,7 @@
           "items": [
             "receivers[].ip",
             "receivers[].volumeAccessory",
+            "receivers[].minVolume",
             "receivers[].maxVolume",
             {
               "type": "section",
@@ -168,6 +169,7 @@
               "title": "Zone 2",
               "items": [
                 "receivers[].enableZone2",
+                "receivers[].zone2MinVolume",
                 "receivers[].zone2MaxVolume"
               ]
             },
@@ -177,7 +179,18 @@
               "title": "Zone 3",
               "items": [
                 "receivers[].enableZone3",
+                "receivers[].zone3MinVolume",
                 "receivers[].zone3MaxVolume"
+              ]
+            },
+            {
+              "type": "section",
+              "expandable": true,
+              "title": "Zone 4",
+              "items": [
+                "receivers[].enableZone4",
+                "receivers[].zone4MinVolume",
+                "receivers[].zone4MaxVolume"
               ]
             }
           ]
