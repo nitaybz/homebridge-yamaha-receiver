@@ -1,0 +1,44 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "CD:22:3D:E3:CE:30",
+    "port": 51826,
+    "pin": "031-45-154"
+  },
+
+  "description": "This is an example configuration for homebridge-yamaha-receiver",
+  "platforms": [
+    {
+      "platform": "YamahaReceiver",
+      "discovery": true,
+      "debug": false,
+      "statePollingInterval": 10,
+      "receivers": [
+        {
+          "ip": "10.0.0.2",
+          "minVolume": -80,
+          "maxVolume": 10,
+          "volumeAccessory": "fan"
+        },
+        {
+          "ip": "10.0.0.5",
+          "minVolume": -80,
+          "maxVolume": 10,
+          "volumeAccessory": "bulb",
+          "enableZone2": true,
+          "zone2MinVolume": -60,
+          "zone2MaxVolume": 30,
+          "enableZone3": true,
+          "zone3MinVolume": -60,
+          "zone3MaxVolume": 20,
+          "enableZone4": true,
+          "zone4MinVolume": -60,
+          "zone4MaxVolume": 10
+        }
+      ]
+    }
+  ],
+
+  "accessories": [
+  ]
+}
