@@ -70,7 +70,7 @@ class AUDIO_RECEIVER {
 		this.tvService.getCharacteristic(Characteristic.ConfiguredName)
 			.on('set', (name, callback) => {
 				this.log.easyDebug(`Setting new ConfiguredName: from ${this.name} to ${name}`)
-				this.cachedDevice[this.zone].name = name
+				this.cachedDevice[`zone${this.zone}`].name = name
 				this.storage.setItem('cachedDevices', this.cachedDevices)
 				callback()
 			}).updateValue(this.name)

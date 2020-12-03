@@ -18,10 +18,14 @@ ______________
 
 ### Requirements
 
-<img src="https://img.shields.io/badge/node-%3E%3D10.17-brightgreen"> &nbsp;
-<img src="https://img.shields.io/badge/homebridge-%3E%3D0.4.4-brightgreen">
 
-check with: `node -v` & `homebridge -V` and update if needed
+<img src="https://img.shields.io/badge/node-%3E%3D10.17-brightgreen"> &nbsp;
+<img src="https://img.shields.io/badge/homebridge-%3E%3D1.1.6-brightgreen">
+
+- [x] Set static IP for the receiver
+- [x] Turn on "Network Stand-By" in the receiver settings
+- [X] Check Node Version with `node -v`
+- [X] Check Homebridge version with `homebridge -V`
 
 ## Support homebridge-yamaha-receiver
 
