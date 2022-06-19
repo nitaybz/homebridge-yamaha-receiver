@@ -1,7 +1,3 @@
-## ~~~~~~~~ UNDER DEVELOPMENT ~~~~~~~~
-______________
-
-
 <img src="branding/yamaha_homebridge.png" width="500px">
 
 # homebridge-yamaha-receiver
@@ -24,8 +20,8 @@ ______________
 
 - [x] Set static IP for the receiver
 - [x] Turn on "Network Stand-By" in the receiver settings
-- [X] Check Node Version with `node -v`
-- [X] Check Homebridge version with `homebridge -V`
+- [x] Check Node Version with `node -v`
+- [x] Check Homebridge version with `homebridge -V`
 
 ## Support homebridge-yamaha-receiver
 

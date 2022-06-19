@@ -29,6 +29,11 @@
           "title": "Audio Receivers",
           "type": "object",
           "properties": {
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "required": true
+            },
             "ip": {
               "title": "IP Address (IPv4)",
               "type": "string",
@@ -159,6 +164,7 @@
           "expandable": false,
           "title": "Configurations (Main Zone)",
           "items": [
+            "receivers[].name",
             "receivers[].ip",
             "receivers[].volumeAccessory",
             "receivers[].minVolume",

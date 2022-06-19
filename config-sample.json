@@ -15,12 +15,14 @@
       "statePollingInterval": 10,
       "receivers": [
         {
+          "name": "My AVR",
           "ip": "10.0.0.2",
           "minVolume": -80,
           "maxVolume": 10,
           "volumeAccessory": "fan"
         },
         {
+          "name": "My Yamaha",
           "ip": "10.0.0.5",
           "minVolume": -80,
           "maxVolume": 10,
