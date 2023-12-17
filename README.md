@@ -3,9 +3,8 @@
 # homebridge-yamaha-receiver
 
 [![Downloads](https://img.shields.io/npm/dt/homebridge-yamaha-receiver.svg?color=critical)](https://www.npmjs.com/package/homebridge-yamaha-receiver)
-[![Version](https://img.shields.io/npm/v/homebridge-yamaha-receiver)](https://www.npmjs.com/package/homebridge-yamaha-receiver)<br>
-<!-- [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins) [![Homebridge Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.gg/7DyabQ6)<br>
-[![certified-hoobs-plugin](https://badgen.net/badge/HOOBS/Certified/yellow)](https://plugins.hoobs.org?ref=10876) [![hoobs-support](https://badgen.net/badge/HOOBS/Support/yellow)](https://support.hoobs.org?ref=10876) -->
+[![Version](https://img.shields.io/npm/v/homebridge-yamaha-receiver)](https://www.npmjs.com/package/homebridge-yamaha-receiver)
+[![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
 
 [Homebridge](https://github.com/nfarina/homebridge) plugin for Yamaha Audio Receivers
 
