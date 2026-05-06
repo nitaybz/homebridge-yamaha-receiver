@@ -35,7 +35,7 @@ class AUDIO_RECEIVER {
 
 		this.UUID = this.api.hap.uuid.generate(this.id)
 		this.log.easyDebug(`Creating New AUDIO RECEIVER Accessory: "${this.name}"`)
-		this.accessory = new this.api.platformAccessory(this.name, this.UUID, this.api.hap.Accessory.Categories.AUDIO_RECEIVER)
+		this.accessory = new this.api.platformAccessory(this.name, this.UUID, this.api.hap.Categories.AUDIO_RECEIVER)
 
 
 		let informationService = this.accessory.getService(Service.AccessoryInformation)
