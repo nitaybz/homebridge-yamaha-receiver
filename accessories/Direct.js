@@ -1,6 +1,6 @@
 let Characteristic, Service;
 
-class PARTY_SWITCH {
+class DIRECT_SWITCH {
 	constructor(avr, platform, config) {
 		Service = platform.api.hap.Service;
 		Characteristic = platform.api.hap.Characteristic;
@@ -10,15 +10,15 @@ class PARTY_SWITCH {
 		this.log = platform.log;
 		this.api = platform.api;
 		this.avrId = config.id;
-		this.id = `${config.id}_party_switch`;
-		this.name = config.name + " Party Mode";
+		this.id = `${config.id}_direct_switch`;
+		this.name = config.name + " Direct";
 		this.serial = this.id;
 		this.model = config.model || "unknown";
 		this.manufacturer = "Yamaha";
 		this.displayName = this.name;
 
 		this.UUID = this.api.hap.uuid.generate(this.id);
-		this.log.easyDebug(`Creating New PARTY SWITCH Accessory: "${this.name}"`);
+		this.log.easyDebug(`Creating New DIRECT SWITCH Accessory: "${this.name}"`);
 		this.accessory = new this.api.platformAccessory(this.name, this.UUID);
 
 		this.setServices()
@@ -48,41 +48,30 @@ class PARTY_SWITCH {
 			.setCharacteristic(Characteristic.Model, this.model)
 			.setCharacteristic(Characteristic.SerialNumber, this.serial);
 
-		this.partyService = this.accessory.addService(Service.Switch, this.name);
+		this.directService = this.accessory.addService(Service.Switch, this.name);
 
-		this.partyService
+		this.directService
 			.getCharacteristic(Characteristic.On)
-			.on("get", this.getPartyModeState.bind(this))
-			.on("set", this.setPartyModeState.bind(this));
+			.on("get", this.getDirectState.bind(this))
+			.on("set", this.setDirectState.bind(this));
 	}
 
-	getPartyModeState(callback) {
+	getDirectState(callback) {
 		this.avr
-			.isPartyModeEnabled()
-			.then((result) => callback(null, result))
+			.isPureDirectEnabled()
+			.then((result) => callback(null, !!result))
 			.catch((error) => callback(error));
 	}
 
-	setPartyModeState(on, callback) {
-		if (on) {
-			this.avr
-				.powerOn()
-				.then(() => this.avr.partyModeOn())
-				.then(() => {
-					this.log(`${this.name} - Party Mode turned ON`);
-					callback(null, true);
-				})
-				.catch((error) => callback(error));
-		} else {
-			this.avr
-				.partyModeOff()
-				.then(() => {
-					this.log(`${this.name} - Party Mode turned OFF`);
-					callback(null, false);
-				})
-				.catch((error) => callback(error));
-		}
+	setDirectState(on, callback) {
+		this.avr
+			.setPureDirect(!!on)
+			.then(() => {
+				this.log(`${this.name} - Pure Direct turned ${on ? "ON" : "OFF"}`);
+				callback(null, !!on);
+			})
+			.catch((error) => callback(error));
 	}
 }
 
-module.exports = PARTY_SWITCH;
+module.exports = DIRECT_SWITCH;
