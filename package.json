@@ -1,7 +1,7 @@
 {
   "name": "homebridge-yamaha-receiver",
   "description": "Homebridge Plugin for Yamaha Audio Receivers",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/nitaybz/homebridge-yamaha-receiver.git"
@@ -29,7 +29,10 @@
     "eslint": "^8.57.1"
   },
   "overrides": {
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "form-data": "^4.0.4",
+    "qs": "^6.14.1",
+    "tough-cookie": "^5.1.2"
   },
   "scripts": {
     "lint": "eslint .",
