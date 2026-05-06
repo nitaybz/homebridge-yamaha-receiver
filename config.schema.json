@@ -39,6 +39,13 @@
               "type": "string",
               "required": true
             },
+            "partySwitch": {
+              "title": "Enable Party Mode Switch",
+              "description": "Add a switch to control party mode",
+              "type": "boolean",
+              "default": false,
+              "required": false
+            },
             "volumeAccessory": {
               "title": "External Volume Accessory",
               "description": "Extra accessory for better volume control",
@@ -166,6 +173,7 @@
           "items": [
             "receivers[].name",
             "receivers[].ip",
+            "receivers[].partySwitch",
             "receivers[].volumeAccessory",
             "receivers[].minVolume",
             "receivers[].maxVolume",
